@@ -1,3 +1,4 @@
+import os
 import random
 
 def trivia():
@@ -68,7 +69,8 @@ def trivia():
     print(f"\nJuego terminado. {nombre}, tu puntuación es: {puntuacion}/25")
 
     # Guardar la puntuación en un archivo
-    with open("puntos.txt", "a") as puntos:
+    ruta_archivo = os.path.join(os.path.dirname(__file__), "datos.txt")
+    with open(ruta_archivo, "a") as puntos:
         puntos.write(f"{nombre}: {puntuacion}/25\n")
     print("Tu puntuación ha sido guardada en 'puntos.txt'.")
 

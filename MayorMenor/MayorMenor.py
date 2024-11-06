@@ -18,11 +18,11 @@ def mayormenor():
             print("El numero es mayor, intenta nuevamente")
         else:
             print("El numero es menor, intente nuevamente")
-        ruta_archivo = os.path.join(os.path.dirname(_file_), "puntaje.txt")
+        ruta_archivo = os.path.join(os.path.dirname(__file__), "puntaje.txt")
     with open(ruta_archivo, "a") as puntos:
         puntos.write(f"{nombre}: {puntaje}\n")
     print("Tu puntuación ha sido guardada en 'puntaje.txt'.")
-    ruta_archivo = os.path.join(os.path.dirname(_file_), "puntaje.txt")
+    ruta_archivo = os.path.join(os.path.dirname(__file__), "puntaje.txt")
     with open(ruta_archivo, "r") as archivo:
         for linea in archivo:
             nombre, puntaje = linea.strip().split(":") 

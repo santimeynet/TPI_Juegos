@@ -20,9 +20,9 @@ def kinggame():
             print("El archivo no existe. Asegúrate de que se hayan guardado datos previamente.")
 
     
-    economia=50
-    pueblo=50
-    ejercito=50
+    economia=30
+    pueblo=30
+    ejercito=30
     
     eventos=[str()for i in range (15)]
     eventos [0]="Introducción de un sistema de salud universal financiado por una disminución en el gasto militar.\n\nAceptar: Mejora la salud pública, pero reduce el presupuesto militar.\nRechazar: Mantiene el presupuesto militar, pero limita la expansión de la salud pública."
@@ -46,7 +46,7 @@ def kinggame():
     pf=0
     nom=input(str("Ingrese su nombre\n"))
     print("Como rey de un vasto y turbulento reino, cada decisión está en tus manos.Tus elecciones afectarán a tus economía, a tu gente y a las fuerzas del ejercito.\n ¿Lograrás mantener el equilibrio o caerá tu reino en el caos?")
-    input("Precione cualquier tecla para iniciar\n")
+    input("Presione cualquier tecla para iniciar\n")
 
     re = random.randint(0, len(eventos) - 1)    
     
@@ -82,6 +82,7 @@ def kinggame():
     if vj == "1":
         kinggame()
     else:
+        os.system("cls")
         print("Volviendo al menu principal...")
 
 

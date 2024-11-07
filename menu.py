@@ -1,6 +1,7 @@
 import Trivia.juego
 import KingGame.kinggame
 import MayorMenor.MayorMenor
+import Rangle.rangle
 
 def menu():
     print("******************************")
@@ -9,6 +10,7 @@ def menu():
     print("1. ¡King Game!")
     print("2. ¡Mayor o Menor!")
     print("3. ¡Triviador!")
+    print("4. ¡Rangle!")
     print("*******************************")
 
     juego = int(input("¡Ingrese el numero del juego que desea iniciar!\n"))
@@ -20,6 +22,8 @@ def menu():
         MayorMenor.MayorMenor.mayormenor()
     elif juego == 3:
         Trivia.juego.trivia()
+    elif juego == 4:
+        Rangle.rangle.main()
     else:
         print("Ingrese un numero valido")
     

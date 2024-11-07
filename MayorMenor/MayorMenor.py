@@ -32,6 +32,7 @@ def mayormenor():
     if jugar_de_nuevo == 1:
         mayormenor()
     else:
+        os.system("cls")
         print("Volviendo al menu principal...")
 
 if __name__ == "__main__":

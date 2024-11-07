@@ -5,9 +5,11 @@ import random
 
 def trivia():
 
-    # Array de preguntas y respuestas.
+    # Diccionario de preguntas y respuestas con claves como categorias y preguntas como lista de 5 tuplas.
     preguntas_respuestas = {
+        # Claves como categorias
         "Deportes": [
+            # Tuplas con clave y valor.
             ("¿Cuántos balones de oro ganó Messi?. Responda con número.", "8"),
             ("¿Cómo se llama el actual corredor argentino de F1?", "Franco Colapinto"),
             ("¿El último equipo en ganar la Champions League fue?", "Real Madrid"),
@@ -60,6 +62,7 @@ def trivia():
         print(f"\nCategoría: {categoria}")
         preguntas = random.sample(preguntas_respuestas[categoria], 5)
         
+        # Se accede a la lista de tuplas que es preguntas y se le asigna el valor de cada elemento a pregunta y respuesta_correcta
         for pregunta, respuesta_correcta in preguntas:
             print(pregunta)
             respuesta_usuario = input("Tu respuesta: ")
@@ -79,11 +82,12 @@ def trivia():
     print("Tu puntuación ha sido guardada en 'puntos.txt'.")
 
     # Preguntamos si se quiere volver a jugar.
-    jugar_nuevamente = int(input(f"¿Desea volver a jugar?. 1 = SI // Cualquier número para volver al menú principal.\n"))
+    jugar_nuevamente = int(input(f"¿Desea volver a jugar?. 1 = SI // Cualquier otro número para volver al menú principal.\n"))
 
     if jugar_nuevamente == 1:
         trivia()
     else:
+        os.system("cls")
         print("Volviendo al menu principal...")
 
 if __name__ == "__main__":

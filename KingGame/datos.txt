@@ -1,4 +1,9 @@
-Valentin,15
-Santiago,14
-Santiago,7
-
+a,23
+a,7
+a,9
+san,12
+san,5
+axel,6
+h,11
+h,8
+Santiago,5

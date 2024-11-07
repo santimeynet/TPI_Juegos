@@ -1,6 +1,5 @@
 import os
 import random
-import menu
 
 # Funcion del juego.
 
@@ -80,12 +79,12 @@ def trivia():
     print("Tu puntuación ha sido guardada en 'puntos.txt'.")
 
     # Preguntamos si se quiere volver a jugar.
-    jugar_nuevamente = int(input(f"¿Desea volver a jugar?. 1 = SI // ENTER para volver al menú principal.\n"))
+    jugar_nuevamente = int(input(f"¿Desea volver a jugar?. 1 = SI // Cualquier número para volver al menú principal.\n"))
 
     if jugar_nuevamente == 1:
         trivia()
     else:
-        menu()
+        print("Volviendo al menu principal...")
 
 if __name__ == "__main__":
     trivia()

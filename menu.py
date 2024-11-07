@@ -9,7 +9,6 @@ def menu():
     print("1. ¡King Game!")
     print("2. ¡Mayor o Menor!")
     print("3. ¡Triviador!")
-    print("4. ¡Juego!")
     print("*******************************")
 
     juego = int(input("¡Ingrese el numero del juego que desea iniciar!\n"))
@@ -23,5 +22,7 @@ def menu():
         Trivia.juego.trivia()
     else:
         print("Ingrese un numero valido")
+    
+    menu()
 
 menu()

@@ -78,9 +78,11 @@ def kinggame():
 
     puntosFinal= mostrar_datos()
 
-    vj=input("Presione 1 para volver a jugar o 2 para volver al menu. ")
+    vj=input("Ingrese 1 para volver a jugar o cualquier otro número para volver al menu. ")
     if vj == "1":
         kinggame()
+    else:
+        print("Volviendo al menu principal...")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 import os
 import random
-import Menu.menu as menu
+import menu
 
 # Funcion del juego.
 

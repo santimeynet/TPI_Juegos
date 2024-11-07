@@ -1,8 +1,12 @@
 import os
 import random
+import Menu.menu as menu
+
+# Funcion del juego.
 
 def trivia():
-    # Array de preguntas y respuestas
+
+    # Array de preguntas y respuestas.
     preguntas_respuestas = {
         "Deportes": [
             ("¿Cuántos balones de oro ganó Messi?. Responda con número.", "8"),
@@ -46,11 +50,12 @@ def trivia():
 
     print(f"Genial {nombre}, vamos a jugar a un preguntas y respuestas!")
 
-    # Función para jugar
 
     puntuacion = 0
     categorias = list(preguntas_respuestas.keys())
     random.shuffle(categorias)
+
+    # Ciclo for para recorrer las categorias e imprimir cada una de las preguntas.
 
     for categoria in categorias:
         print(f"\nCategoría: {categoria}")
@@ -69,18 +74,20 @@ def trivia():
     print(f"\nJuego terminado. {nombre}, tu puntuación es: {puntuacion}/25")
 
     # Guardar la puntuación en un archivo
-    ruta_archivo = os.path.join(os.path.dirname(__file__), "datos.txt")
+    ruta_archivo = os.path.join(os.path.dirname(__file__), "puntos.txt")
     with open(ruta_archivo, "a") as puntos:
         puntos.write(f"{nombre}: {puntuacion}/25\n")
     print("Tu puntuación ha sido guardada en 'puntos.txt'.")
 
     # Preguntamos si se quiere volver a jugar.
-    jugar_nuevamente = input(f"¿Desea volver a jugar?. 1 = SI, 0 = NO\n")
+    jugar_nuevamente = int(input(f"¿Desea volver a jugar?. 1 = SI // ENTER para volver al menú principal.\n"))
 
-    if jugar_nuevamente == "1":
+    if jugar_nuevamente == 1:
         trivia()
     else:
-        print("Juego terminado!")
+        menu()
 
-# Ejecutar el juego
-trivia()
+if __name__ == "__main__":
+    trivia()
+
+

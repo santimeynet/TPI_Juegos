@@ -45,24 +45,24 @@ def kinggame():
     
     pf=0
     nom=input(str("Ingrese su nombre\n"))
-    print("Como rey de un vasto y turbulento reino, cada decisión está en tus manos.Tus elecciones afectarán a tus economia, a tu gente y a las fuerzas del ejercito.\n ¿Lograrás mantener el equilibrio o caerá tu reino en el caos?")
+    print("Como rey de un vasto y turbulento reino, cada decisión está en tus manos.Tus elecciones afectarán a tus economía, a tu gente y a las fuerzas del ejercito.\n ¿Lograrás mantener el equilibrio o caerá tu reino en el caos?")
     input("Precione cualquier tecla para iniciar\n")
 
     re = random.randint(0, len(eventos) - 1)    
     
     while economia > 0 and pueblo > 0 and ejercito > 0:
         print(eventos[re])
-        desicion=str(input()).lower()
-        if desicion == "aceptar" or "1":
+        decision=str(input()).lower()
+        if decision == "aceptar" or "1":
             economia += valores[re][1]
             pueblo += valores[re][2]
             ejercito += valores[re][3]
-        elif desicion == "rechazar" or "2":
+        elif decision == "rechazar" or "2":
             economia += valores[re][4]
             pueblo += valores[re][5]
             ejercito += valores[re][6]
         else:
-            print("Error desicion no valida")
+            print("Error decisión no valida")
             continue
         re = random.randint(0, len(eventos) - 1)
         pf = pf +1
@@ -70,7 +70,7 @@ def kinggame():
     if economia <= 0:
         print("PERDSITE\n Tu economia llego a 0, el estado esta en banca rota.")
     elif pueblo <= 0:
-        print("PERDISTE\n El pueblo se revelo contra el estado expulsandote del trono.")
+        print("PERDISTE\n El pueblo se reveló contra el estado expulsandote del trono.")
     elif ejercito <= 0:
         print("PERDISTE\n El ejercito a tomado el mando mediente un golpe de estado.")
 
@@ -78,8 +78,11 @@ def kinggame():
 
     puntosFinal= mostrar_datos()
 
-    vj=input("Precione 1 para volver a jugar o 2 para volver al menu. ")
+    vj=input("Presione 1 para volver a jugar o 2 para volver al menu. ")
     if vj == "1":
         kinggame()
 
-kinggame()
+
+if __name__ == "__main__":
+    kinggame()
+

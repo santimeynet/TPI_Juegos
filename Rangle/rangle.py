@@ -75,11 +75,11 @@ def main(): # Función principal
         if(name == table[i][0]):
             table[i][2] += 1  # Incrementa partidas jugadas
             band = False
-            if(attemps >= 0):  # Suma partidas ganadas si acertó
+            if(number == integer):  # Suma partidas ganadas si acertó
                 table[i][1] += 1
     if(band):  # Si el jugador es nuevo, lo añade a la tabla
         table.append([name, 0, 1])
-        if(attemps >= 0):  # Marca como ganada si acertó
+        if(number == integer):  # Marca como ganada si acertó
             table[-1][2] += 1
     for i in range(len(table) - 1): # Ordena la tabla de puntajes
         aux = i
